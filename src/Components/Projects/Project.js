@@ -14,7 +14,7 @@ export const Project = ({ project }) => {
 };
 const Link = styled.a`
   text-decoration: none;
-  color: inherit;
+  color: black;
 `;
 const InfoContainer = styled.div`
   width: 12vw;
