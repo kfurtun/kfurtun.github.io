@@ -13,8 +13,8 @@ export const Project = ({ project }) => {
   );
 };
 const Link = styled.a`
-  text-decoration: none;
-  color: black;
+  text-decoration: none !important;
+  color: inherit !important;
 `;
 const InfoContainer = styled.div`
   width: 12vw;
