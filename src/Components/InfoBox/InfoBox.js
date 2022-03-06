@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { ItemLink } from "../ItemLink";
+import image from "../../images/image.jpeg";
 
 export const InfoBox = () => {
   return (
     <Container>
       <ImgContainer>
-        <Img src="/image.jpeg" alt="kutay" />
+        <Img src={image} alt="kutay" />
       </ImgContainer>
       <InfoContainer>
         <Text isBold={true} size="2.5vw" mobileSize="2.5vh">
