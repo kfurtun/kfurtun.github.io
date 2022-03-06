@@ -27,6 +27,7 @@ const InfoContainer = styled.div`
   @media (max-width: 500px) {
     width: 10vh;
     height: 5vh;
+    display: block;
   }
 `;
 
@@ -61,6 +62,10 @@ const Container = styled.button`
     width: 10vh;
     height: 10vh;
     margin-top: 2vh;
+
+    &:hover ${InfoContainer} {
+      display: none;
+    }
   }
 `;
 
