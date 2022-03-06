@@ -2,17 +2,19 @@ import styled from "styled-components";
 
 export const Project = ({ project }) => {
   return (
-    <a href={project.link} target="_blank" rel="noreferrer">
+    <Link href={project.link} target="_blank" rel="noreferrer">
       <Container img={project.img}>
         <InfoContainer>
           <Libraries>{project.library}</Libraries>
           <Name>{project.name}</Name>
         </InfoContainer>
       </Container>
-    </a>
+    </Link>
   );
 };
-
+const Link = styled.a`
+  text-decoration: none;
+`;
 const InfoContainer = styled.div`
   width: 12vw;
   height: 5vw;
@@ -28,7 +30,7 @@ const InfoContainer = styled.div`
     width: 10vh;
     height: 5vh;
     display: flex;
-    bottom: -5.5vh;
+    bottom: -6vh;
     background: none;
   }
 `;
