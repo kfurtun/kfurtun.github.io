@@ -16,7 +16,7 @@ export const Project = ({ project }) => {
 const InfoContainer = styled.div`
   width: 12vw;
   height: 5vw;
-  background: black;
+
   position: absolute;
   bottom: 0;
   display: none;
@@ -27,7 +27,9 @@ const InfoContainer = styled.div`
   @media (max-width: 500px) {
     width: 10vh;
     height: 5vh;
-    display: block;
+    display: flex;
+    bottom: -5.5vh;
+    background: none;
   }
 `;
 
@@ -64,7 +66,7 @@ const Container = styled.button`
     margin-top: 2vh;
 
     &:hover ${InfoContainer} {
-      display: none;
+      background: none;
     }
   }
 `;
