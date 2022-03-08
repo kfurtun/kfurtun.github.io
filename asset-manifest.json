@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.4f6b9512.js",
+    "main.js": "/static/js/main.37dfa95f.js",
     "static/js/787.41e12054.chunk.js": "/static/js/787.41e12054.chunk.js",
     "static/media/canada-flag.png": "/static/media/canada-flag.0368890c1649370697e4.png",
     "static/media/logos.jpg": "/static/media/logos.06a4ac43f5a6d88fb816.jpg",
@@ -8,10 +8,10 @@
     "static/media/budget.png": "/static/media/budget.0b9f21d38b9a8ad4bbab.png",
     "static/media/image.jpeg": "/static/media/image.4a57abda470a22dcd435.jpeg",
     "index.html": "/index.html",
-    "main.4f6b9512.js.map": "/static/js/main.4f6b9512.js.map",
+    "main.37dfa95f.js.map": "/static/js/main.37dfa95f.js.map",
     "787.41e12054.chunk.js.map": "/static/js/787.41e12054.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.4f6b9512.js"
+    "static/js/main.37dfa95f.js"
   ]
 }
