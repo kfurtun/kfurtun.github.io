@@ -15,6 +15,14 @@ export const Project = ({ project }) => {
 const Link = styled.a`
   text-decoration: none !important;
   color: inherit !important;
+
+  @media (max-width: 500px) {
+    &:link,
+    &:visited {
+      text-decoration: none !important;
+      color: inherit !important;
+    }
+  }
 `;
 const InfoContainer = styled.div`
   width: 12vw;
