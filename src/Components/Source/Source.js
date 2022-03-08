@@ -35,7 +35,7 @@ const Container = styled.div`
   border-radius: 12px;
 
   &:hover {
-    background-color: rgba(195, 192, 194, 0.41);
+    background-color: rgba(195, 192, 194, 0.8);
     transform: translate(0.3vw, 0.3vw);
     transition: 1s;
   }
