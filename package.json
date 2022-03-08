@@ -2,7 +2,7 @@
   "name": "kfurtun.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kfurtun.github.io/",
+  "homepage": "https://kutayfurtun.com",
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.1.17",
     "@testing-library/jest-dom": "^5.16.2",
