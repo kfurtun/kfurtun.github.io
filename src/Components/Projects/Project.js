@@ -49,6 +49,7 @@ const Container = styled.button`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 12px;
 
   width: 12vw;
   height: 12vw;

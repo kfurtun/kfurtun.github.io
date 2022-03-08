@@ -37,9 +37,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20vh;
+  margin-top: 15vh;
   position: relative;
-
+  border-radius: 12px;
   background: white;
 
   @media (max-width: 500px) {
