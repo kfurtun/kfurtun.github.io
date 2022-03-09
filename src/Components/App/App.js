@@ -16,6 +16,7 @@ export const App = () => {
 
   return (
     <Container>
+      Kutay
       <GlobalStyles />
       <Source />
       <InfoBox />
