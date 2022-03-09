@@ -12,7 +12,7 @@ import ReactGA from "react-ga";
 export const App = () => {
   const TRACKING_ID = "UA-192692463-1";
   ReactGA.initialize(TRACKING_ID);
-  ReactGA.pageview(window.location.pathname + window.location.search);
+  ReactGA.pageview(window.location.pathname);
 
   return (
     <Container>
