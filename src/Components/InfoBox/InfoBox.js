@@ -19,7 +19,7 @@ export const InfoBox = () => {
           Vancouver, BC, Canada
         </Text>
         <Text size="1.1vw" mobileSize="1.1vh">
-          JS|React|React Native|NodeJS|MS SQL
+          JS|React|React Native|NodeJS|MS SQL|MongoDB
         </Text>
         <Links>
           <ItemLink />
