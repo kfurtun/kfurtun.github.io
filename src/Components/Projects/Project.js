@@ -27,7 +27,6 @@ const Link = styled.a`
 const InfoContainer = styled.div`
   width: 12vw;
   height: 5vw;
-
   position: absolute;
   bottom: 0;
   display: none;
@@ -50,7 +49,7 @@ const Container = styled.button`
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 12px;
-
+  cursor: pointer;
   width: 12vw;
   height: 12vw;
   border: none;
@@ -59,12 +58,9 @@ const Container = styled.button`
   padding: 0;
   position: relative;
   transition: 1s;
-
   &:hover {
     transform: scale(1.2);
     transition: 1s;
-
-    cursor: pointer;
   }
   &:hover ${InfoContainer} {
     background-color: rgba(195, 192, 194, 0.41);

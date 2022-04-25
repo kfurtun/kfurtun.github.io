@@ -2,8 +2,16 @@ import canadaFlag from "../../images/canada-flag.png";
 import budgetImg from "../../images/budget.png";
 import logoImg from "../../images/logos.jpg";
 import diceImg from "../../images/dices.png";
+import wearables from "../../images/logo.png";
 
 export const projectsData = [
+  {
+    id: "wearablesApp",
+    img: wearables,
+    library: "React, ExpressJS, MongoDB",
+    name: "Wearables",
+    link: "https://github.com/kfurtun/wearables-ecommerce-platform",
+  },
   {
     id: "citizenshipDayCalculatorApp",
     img: canadaFlag,
