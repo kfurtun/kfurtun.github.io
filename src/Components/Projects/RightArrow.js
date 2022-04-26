@@ -1,35 +1,35 @@
 import React from "react";
 import styled from "styled-components";
+
 export const RightArrow = (props) => {
   const {
-    setArrow,
-    setIndex,
-    index,
     projectsData,
-    arrow,
-    width,
     setShowedProjects,
-    showedProjects,
+    arrow,
+    setArrow,
+    index,
+    setIndex,
+    otherIndex,
+    setOtherIndex,
   } = props;
-  console.log(index);
 
   const handleClick = () => {
     setArrow("right");
-    if (index === projectsData.length - 1) {
-      setIndex(0);
+    if (otherIndex === 0) {
+      setOtherIndex(projectsData.length - 1);
     } else {
-      setIndex(index + 1);
+      setOtherIndex((prev) => prev - 1);
+    }
+
+    if (index === 0) {
+      setIndex(projectsData.length - 1);
+    } else {
+      setIndex((prev) => prev - 1);
     }
   };
-
   React.useEffect(() => {
-    if (arrow === "right") {
-      if (width < 500) {
-        setShowedProjects([...showedProjects.slice(1, 3), projectsData[index]]);
-      } else if (arrow === "right") {
-        setShowedProjects([...showedProjects.slice(1, 4), projectsData[index]]);
-      }
-    }
+    arrow === "right" &&
+      setShowedProjects((prev) => [projectsData[index], ...prev.slice(0, 3)]);
   }, [index]);
   return <Arrow onClick={handleClick}>{">"}</Arrow>;
 };

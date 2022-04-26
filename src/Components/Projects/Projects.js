@@ -1,7 +1,7 @@
 import React from "react";
 import { Project } from "./Project";
-// import { LeftArrow } from "./LeftArrow";
-// import { RightArrow } from "./RightArrow";
+import { RightArrow } from "./RightArrow";
+import { LeftArrow } from "./LeftArrow";
 import styled from "styled-components";
 import { projectsData } from "./projectsData";
 import useWindowDimensions from "../useWindowDimesion";
@@ -11,37 +11,37 @@ export const Projects = () => {
   const [showedProjects, setShowedProjects] = React.useState(
     width >= 500 ? [...projectsData.slice(0, 4)] : [...projectsData.slice(0, 3)]
   );
-  // const [leftIndex, setLeftIndex] = React.useState(0);
-  // const [rightIndex, setRightIndex] = React.useState(3);
-  // const [arrow, setArrow] = React.useState("");
+  const [arrow, setArrow] = React.useState("");
+  const [rightIndex, setRightIndex] = React.useState(0);
+  const [leftIndex, setLeftIndex] = React.useState(3);
 
   return (
     <Wrapper>
-      {/* <LeftArrow
-        width={width}
-        setArrow={setArrow}
-        setIndex={setLeftIndex}
-        index={leftIndex}
+      <LeftArrow
         projectsData={projectsData}
-        arrow={arrow}
         setShowedProjects={setShowedProjects}
-        showedProjects={showedProjects}
-      /> */}
+        arrow={arrow}
+        setArrow={setArrow}
+        index={leftIndex}
+        setIndex={setLeftIndex}
+        setOtherIndex={setRightIndex}
+        otherIndex={rightIndex}
+      />
       <Container>
         {showedProjects.map((project) => {
           return <Project project={project} />;
         })}
       </Container>
-      {/* <RightArrow
-        width={width}
-        setArrow={setArrow}
-        setIndex={setRightIndex}
-        index={rightIndex}
+      <RightArrow
         projectsData={projectsData}
-        arrow={arrow}
         setShowedProjects={setShowedProjects}
-        showedProjects={showedProjects}
-      /> */}
+        arrow={arrow}
+        setArrow={setArrow}
+        index={rightIndex}
+        setIndex={setRightIndex}
+        setOtherIndex={setLeftIndex}
+        otherIndex={leftIndex}
+      />
     </Wrapper>
   );
 };
