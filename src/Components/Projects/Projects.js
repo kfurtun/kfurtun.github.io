@@ -1,52 +1,47 @@
 import React from "react";
 import { Project } from "./Project";
+import { LeftArrow } from "./LeftArrow";
+import { RightArrow } from "./RightArrow";
 import styled from "styled-components";
 import { projectsData } from "./projectsData";
 import useWindowDimensions from "../useWindowDimesion";
 
 export const Projects = () => {
-  const [showedProjects, setShowedProjects] = React.useState([...projectsData]);
-  const [index, setIndex] = React.useState(1);
   const { width } = useWindowDimensions();
+  const [showedProjects, setShowedProjects] = React.useState(
+    width >= 500 ? [...projectsData.slice(0, 4)] : [...projectsData.slice(0, 3)]
+  );
+  const [leftIndex, setLeftIndex] = React.useState(0);
+  const [rightIndex, setRightIndex] = React.useState(3);
+  const [arrow, setArrow] = React.useState("");
 
-  const handleClick = () => {
-    if (width < 500) {
-      setShowedProjects([
-        projectsData[projectsData.length - index],
-        ...showedProjects.slice(0, 2),
-      ]);
-
-      if (index === projectsData.length) {
-        setIndex(1);
-      } else {
-        setIndex(index + 1);
-      }
-    } else {
-      setShowedProjects([
-        projectsData[projectsData.length - index],
-        ...showedProjects.slice(0, 3),
-      ]);
-
-      if (index === projectsData.length) {
-        setIndex(1);
-      } else {
-        setIndex(index + 1);
-      }
-    }
-  };
   return (
     <Wrapper>
-      <ArrowButton onClick={handleClick}>{"<"}</ArrowButton>
+      <LeftArrow
+        width={width}
+        setArrow={setArrow}
+        setIndex={setLeftIndex}
+        index={leftIndex}
+        projectsData={projectsData}
+        arrow={arrow}
+        setShowedProjects={setShowedProjects}
+        showedProjects={showedProjects}
+      />
       <Container>
-        {width > 500
-          ? showedProjects.slice(0, 4).map((project) => {
-              return <Project project={project} />;
-            })
-          : showedProjects.slice(0, 3).map((project) => {
-              return <Project project={project} />;
-            })}
+        {showedProjects.map((project) => {
+          return <Project project={project} />;
+        })}
       </Container>
-      <ArrowButton onClick={handleClick}>{">"}</ArrowButton>
+      <RightArrow
+        width={width}
+        setArrow={setArrow}
+        setIndex={setRightIndex}
+        index={rightIndex}
+        projectsData={projectsData}
+        arrow={arrow}
+        setShowedProjects={setShowedProjects}
+        showedProjects={showedProjects}
+      />
     </Wrapper>
   );
 };
@@ -72,17 +67,5 @@ const Container = styled.div`
   gap: 2vw;
   @media (max-width: 500px) {
     width: 60vh;
-  }
-`;
-
-const ArrowButton = styled.button`
-  cursor: pointer;
-  width: 2vw;
-  height: 2vw;
-  font-size: 1vw;
-  @media (max-width: 500px) {
-    width: 2vh;
-    height: 2vh;
-    font-size: 1vh;
   }
 `;
