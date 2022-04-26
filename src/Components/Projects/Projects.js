@@ -1,7 +1,7 @@
 import React from "react";
 import { Project } from "./Project";
-import { LeftArrow } from "./LeftArrow";
-import { RightArrow } from "./RightArrow";
+// import { LeftArrow } from "./LeftArrow";
+// import { RightArrow } from "./RightArrow";
 import styled from "styled-components";
 import { projectsData } from "./projectsData";
 import useWindowDimensions from "../useWindowDimesion";
@@ -11,13 +11,13 @@ export const Projects = () => {
   const [showedProjects, setShowedProjects] = React.useState(
     width >= 500 ? [...projectsData.slice(0, 4)] : [...projectsData.slice(0, 3)]
   );
-  const [leftIndex, setLeftIndex] = React.useState(0);
-  const [rightIndex, setRightIndex] = React.useState(3);
-  const [arrow, setArrow] = React.useState("");
+  // const [leftIndex, setLeftIndex] = React.useState(0);
+  // const [rightIndex, setRightIndex] = React.useState(3);
+  // const [arrow, setArrow] = React.useState("");
 
   return (
     <Wrapper>
-      <LeftArrow
+      {/* <LeftArrow
         width={width}
         setArrow={setArrow}
         setIndex={setLeftIndex}
@@ -26,13 +26,13 @@ export const Projects = () => {
         arrow={arrow}
         setShowedProjects={setShowedProjects}
         showedProjects={showedProjects}
-      />
+      /> */}
       <Container>
         {showedProjects.map((project) => {
           return <Project project={project} />;
         })}
       </Container>
-      <RightArrow
+      {/* <RightArrow
         width={width}
         setArrow={setArrow}
         setIndex={setRightIndex}
@@ -41,7 +41,7 @@ export const Projects = () => {
         arrow={arrow}
         setShowedProjects={setShowedProjects}
         showedProjects={showedProjects}
-      />
+      /> */}
     </Wrapper>
   );
 };
