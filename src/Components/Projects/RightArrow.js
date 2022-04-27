@@ -11,10 +11,12 @@ export const RightArrow = (props) => {
     setIndex,
     otherIndex,
     setOtherIndex,
+    width,
   } = props;
 
   const handleClick = () => {
     setArrow("right");
+
     if (otherIndex === 0) {
       setOtherIndex(projectsData.length - 1);
     } else {
@@ -29,7 +31,15 @@ export const RightArrow = (props) => {
   };
   React.useEffect(() => {
     arrow === "right" &&
-      setShowedProjects((prev) => [projectsData[index], ...prev.slice(0, 3)]);
+      (width >= 500
+        ? setShowedProjects((prev) => [
+            projectsData[index],
+            ...prev.slice(0, 3),
+          ])
+        : setShowedProjects((prev) => [
+            projectsData[index],
+            ...prev.slice(0, 2),
+          ]));
   }, [index]);
   return <Arrow onClick={handleClick}>{">"}</Arrow>;
 };

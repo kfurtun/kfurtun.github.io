@@ -13,7 +13,7 @@ export const Projects = () => {
   );
   const [arrow, setArrow] = React.useState("");
   const [rightIndex, setRightIndex] = React.useState(0);
-  const [leftIndex, setLeftIndex] = React.useState(3);
+  const [leftIndex, setLeftIndex] = React.useState(width >= 500 ? 3 : 2);
 
   return (
     <Wrapper>
@@ -26,6 +26,7 @@ export const Projects = () => {
         setIndex={setLeftIndex}
         setOtherIndex={setRightIndex}
         otherIndex={rightIndex}
+        width={width}
       />
       <Container>
         {showedProjects.map((project) => {
@@ -41,6 +42,7 @@ export const Projects = () => {
         setIndex={setRightIndex}
         setOtherIndex={setLeftIndex}
         otherIndex={leftIndex}
+        width={width}
       />
     </Wrapper>
   );
